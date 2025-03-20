@@ -1,10 +1,20 @@
-// 當頁面加載完成後添加事件處理
-window.onload = function() {
-    // 監聽 "了解更多" 連結的點擊事件
-    const moreInfoLink = document.getElementById("more-info");
+function myFunction() {
+    var n = document.getElementById('numberInput').value;
+    var str = "<table>";
 
-    moreInfoLink.addEventListener("click", function(event) {
-        event.preventDefault();  // 阻止默認行為，避免跳轉
-        alert("即將來到更多哥特風格的世界！");
-    });
-};
+    for (let i = 1; i <= n; i++) {
+        str += "<tr>";
+        for (let j = 1; j <= n; j++) {
+            // 如果是第一列（j == 1），套用藍色樣式
+            if (j === 1) {
+                str += `<td style="background-color: #01b7ff; color: white;"> ${i} * ${j} = ${i * j}</td>`;
+            } else {
+                str += `<td> ${i} * ${j} = ${i * j}</td>`;
+            }
+        }
+        str += "</tr>";
+    }
+    str += "</table>";
+
+    document.getElementById("myId").innerHTML = str;
+}

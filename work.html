@@ -6,23 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript作業</title>
     <link rel="stylesheet" href="index.css">
-    <script>
-        function myFunction() {
-            var n = document.getElementById('numberInput').value;
-            var str = "<table>";
-
-            for (let i = 1; i <= n; i++) {
-                str += "<tr>";
-                for (let j = 1; j <= n; j++) {
-                    str += `<td> ${i} * ${j} = ${i * j}</td>`;
-                }
-                str += "</tr>";
-            }
-            str += "</table>";
-
-            document.getElementById("myId").innerHTML = str;
-        }
-    </script>
+    <script src="multiplication.js" defer></script>
 </head>
 
 <body>
@@ -30,7 +14,7 @@
         <div class="link-container">
             <a href="index.html">主頁</a>
             <a href="about.html">關於我</a>
-            <a href="futrue.html">未來志向</a>
+            <a href="future.html">未來志向</a>
             <a href="work.html">作業</a>
             <a href="other.html">其他</a>
         </div>
