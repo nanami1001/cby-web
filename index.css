@@ -1,0 +1,96 @@
+/* 整體背景和字體顏色 */
+body {
+    background-color: #ffffff;
+    color: #181818;
+    font-family: 'Gothic', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* 頁首樣式 */
+header {
+    text-align: center;
+    padding: 30px 0;
+    background-color: #01b7ff;
+    border-bottom: 2px solid #059bff;
+}
+/* 連結容器 */
+.link-container {
+    display: flex;
+    justify-content: center; /* 讓連結水平置中 */
+    align-items: center; /* 垂直居中 */
+    gap: 150px; /* 增加連結間隔 */
+}
+
+/* 連結樣式 */
+.link-container a {
+    font-size: 1.5rem;
+    color: #181818; /* 預設文字顏色 */
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    transition: color 0.3s ease; /* 平滑變色過渡 */
+}
+
+/* 連結懸停效果（只變換顏色） */
+.link-container a:hover {
+    color: #ffffff; /* 滑鼠懸停時變為白色 */
+}
+
+/* 分隔符號 | 樣式 */
+.link-container a:not(:first-child)::before {
+    content: "|";
+    color: white;
+    font-size: 1.5rem;
+    position: absolute;
+    left: -75px; /* 讓 | 符號正好位於兩個連結的正中央 */
+    transform: translateX(-50%);
+}
+
+
+
+
+/* 主要內容區域 */
+main {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+h2 {
+    color: #01b7ff;
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+/* 主要內容的連結 */
+#more-info {
+    color: #01b7ff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#more-info:hover {
+    color: #059bff;
+    text-decoration: underline;
+}
+
+/* 頁尾樣式 */
+footer {
+    background-color: #01b7ff;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+footer p {
+    color: #ffffff;
+    font-size: 0.9rem;
+}
